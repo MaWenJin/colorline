@@ -29,12 +29,12 @@ function buildmessage(){
    echo -n $fmsg
    skiped=`expr $llen - 10`
    if [[ $skiped -gt $col ]];then
-       writeline `expr $line - 1` $skiped $emsg
+       writemsg `expr $line - 1` $skiped $emsg
    fi
    echo
 }
 
-function writeline(){
+function writemsg(){
     l=$1
     c=$2
     context=$3
@@ -47,7 +47,7 @@ function writeline(){
 
 function welcome(){
    echo `color "welcome to colorline! enjoy it." lightred`
-   echo `color "email:mawenjin AT jd.com" lightred`
+   echo `color "created by mawenjin" lightred`
 }
 
 function color(){
